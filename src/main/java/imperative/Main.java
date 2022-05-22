@@ -1,6 +1,5 @@
 package imperative;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,6 +39,12 @@ public class Main {
                 .filter(person -> person.gender.equals(FEMALE))
           //      .collect(Collectors.toList())
                 .forEach(System.out::println);
+
+        List<Person> females2 =  people.stream()
+                .filter(person -> person.gender.equals(FEMALE))
+                .collect(Collectors.toList());
+
+        females2.forEach(System.out::println);
     }
 
 
