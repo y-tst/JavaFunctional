@@ -1,7 +1,9 @@
 package imperative;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static imperative.Main.Gender.FEMALE;
 import static imperative.Main.Gender.MALE;
@@ -26,9 +28,18 @@ public class Main {
             }
         }
 
+        System.out.println(" - Imperative approach:");
         for (Person person : females){
             System.out.println(person);
         }
+
+        //Find females qty, Declarative approach:
+
+        System.out.println(" - Declarative approach:");
+        people.stream()
+                .filter(person -> person.gender.equals(FEMALE))
+          //      .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
 
