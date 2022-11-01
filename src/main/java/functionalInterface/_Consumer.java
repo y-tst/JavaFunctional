@@ -32,7 +32,7 @@ public class _Consumer {
                     + ", thanks for registering with phone: "
                     + customer.phone);
 
-    static BiConsumer<Customer, Boolean> greetCustomerConsumerV2 = (customer,showNumber) ->
+    static BiConsumer<Customer, Boolean> greetCustomerConsumerV2 = (customer, showNumber) ->
             System.out.println("Dear " + customer.name
                     + ", thanks for registering with phone: "
                     + (showNumber ? customer.phone : "********"));
@@ -41,7 +41,7 @@ public class _Consumer {
         private final String name;
         private final int phone;
 
-        Customer(String name, int phone){
+        Customer(String name, int phone) {
             this.name = name;
             this.phone = phone;
         }
